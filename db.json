@@ -1,0 +1,114 @@
+{
+  "blogs": [
+    {
+      "id": 2,
+      "title": "Building Responsive Web Apps",
+      "content": "Learn the techniques for creating responsive web applications..."
+    },
+    {
+      "id": 3,
+      "title": "JavaScript Best Practices",
+      "content": "Explore the best practices for writing clean and maintainable JavaScript code..."
+    },
+    {
+      "id": 4,
+      "title": "Getting Started with React",
+      "content": "A beginner's guide to React.js and its core concepts..."
+    },
+    {
+      "id": 5,
+      "title": "Node.js Fundamentals",
+      "content": "Understand the basics of Node.js and asynchronous JavaScript..."
+    },
+    {
+      "id": 6,
+      "title": "CSS Grid Layout",
+      "content": "Master the CSS Grid Layout for creating flexible and powerful page layouts..."
+    },
+    {
+      "id": 7,
+      "title": "Web Security Essentials",
+      "content": "Learn about common web security threats and best practices for securing your applications..."
+    },
+    {
+      "id": 8,
+      "title": "GraphQL in Action",
+      "content": "An in-depth look at using GraphQL for efficient data fetching and manipulation..."
+    },
+    {
+      "id": 9,
+      "title": "Mobile App Development with Flutter",
+      "content": "Explore the world of Flutter for cross-platform mobile app development..."
+    },
+    {
+      "id": 10,
+      "title": "Database Design Principles",
+      "content": "Understand the key principles of designing efficient and scalable databases..."
+    },
+    {
+      "id": 11,
+      "title": "Testing Strategies for JavaScript Applications",
+      "content": "Discover various testing strategies for JavaScript applications..."
+    },
+    {
+      "id": 12,
+      "title": "Responsive Design with Bootstrap",
+      "content": "Use Bootstrap to create responsive and mobile-friendly websites..."
+    },
+    {
+      "id": 13,
+      "title": "Python for Data Science",
+      "content": "An introduction to using Python for data analysis and machine learning..."
+    },
+    {
+      "id": 14,
+      "title": "RESTful API Design",
+      "content": "Best practices for designing RESTful APIs for your applications..."
+    },
+    {
+      "id": 15,
+      "title": "Journey into DevOps",
+      "content": "Explore the world of DevOps and learn about continuous integration and deployment..."
+    },
+    {
+      "id": 16,
+      "title": "Mastering TypeScript",
+      "content": "Deepen your understanding of TypeScript and its features..."
+    },
+    {
+      "id": 21,
+      "title": "Design",
+      "content": "jnwek\n"
+    },
+    {
+      "id": 68,
+      "title": "Design 2",
+      "content": "welsdjkdsm"
+    },
+    {
+      "id": 24,
+      "title": "design design",
+      "content": "knwf"
+    },
+    {
+      "id": 51,
+      "title": "design4",
+      "content": "wjkefad"
+    },
+    {
+      "id": 43,
+      "title": "kjdsackdw",
+      "content": "jmnkcsm"
+    },
+    {
+      "id": 54,
+      "title": "javascript",
+      "content": "jnsdkjuwfj"
+    },
+    {
+      "id": 69,
+      "title": "javascript2",
+      "content": "njwejnkjef"
+    }
+  ]
+}

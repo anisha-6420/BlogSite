@@ -1,0 +1,53 @@
+<nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+<button class="btn" routerLink="/">
+<img src="/assets/icon.png" class="mx-4 rounded " style="width: 60px; height: 45px;"  >
+</button>
+<!-- <form  class="d-flex"></form> -->
+
+ <input type="text" style="width: 20%; background-color: white; color: black;" class="form-control" placeholder="Search by Title" [(ngModel)]="searchTerm" (input)="searchBlogs()" />
+<form  class="d-flex"></form>
+<button type="button" class="d-flex btn btn-light mx-5"  routerLink="/create-blog">+ Create Blog</button>
+</nav>
+
+<div class="container mt-5">
+<div class="row ">
+<div  style="color:darkred; font-size: larger; font-weight: bold;" *ngIf="blogPost.length === 0">There are no blogs!</div>
+
+<!-- <div class="col-auto mx-4 mb-5" *ngFor="let blog of filteredBlog | paginate:{ itemsPerPage:blogSize,
+currentPage: page,
+totalItems: count}; let idx = index; "> -->
+<div class="col-auto mx-4 mb-5" *ngFor="let blog of pagedBlog; let idx= index">
+<div class="card-deck">
+<div class="card" style="width: 18rem; height: auto; border: 1px solid darkslategray;">
+   <!-- <img class="card-img-top" src="" alt="Card image cap"> -->
+   <div class="card-body">
+       <h5 class="card-title">{{blog.title}}</h5>
+       <p class="card-text ">{{blog.content}}</p>
+       <button href="#" class="btn btn-primary mx-4" (click)="edit(blog.id)">Edit</button>  
+       <button class="btn btn-danger mx-4" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="setId(blog.id)">Delete</button>
+       
+<div class="modal" id="exampleModal"  aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog  modal-dialog-centered">
+<div class="modal-content">
+<div class="modal-body mb-2 fw-semibold" >
+   Do you want to delete this blog?
+</div>
+<div class="modal-footer" >
+   <button type="button" class="btn btn-primary mx-3"  data-bs-dismiss="modal"  (click)="deleteBlog(blogId )">Yes</button>
+   <button type="button" class="btn btn-secondary " data-bs-dismiss="modal">No</button>
+</div>
+</div>
+</div>
+</div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+<div class="pb-3 text-center"  *ngIf="blogPost.length !== 0">
+<pagination  [(ngModel)]="currentPage" [totalItems]="filteredBlog.length" [itemsPerPage]="itemsPerPage"[previousText]="previousLabel" [nextText]="nextLabel" (pageChanged)="pageChanged($event)" [maxSize]="5"></pagination>
+</div>
+</div>
+<!-- <div class="pb-3">
+<pagination-controls class="text-center " previousLabel="Prev" nextLabel="Next" (pageChange)="onBlogDataChange($event)"></pagination-controls>
+</div> -->
