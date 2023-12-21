@@ -64,8 +64,8 @@ const startIndex = (event.page - 1) * this.itemsPerPage;
 
 edit(i:any){
   this.router.navigate(['/create-blog',i])
-
 }
+
 searchBlogs(): void {
   this.filterBlogs();
   this.pageChanged({ page: 1 });
@@ -77,6 +77,10 @@ deleteBlog(i:any){
      // console.log(i);   
       this.loadBlogs();
   })
+}
+
+fullBlog(i : number){
+  this.router.navigate(['/full-post',i])
 }
 }
 

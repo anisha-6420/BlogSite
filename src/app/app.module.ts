@@ -11,13 +11,15 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { NgxPaginationModule } from 'ngx-pagination';
 import { PaginationModule } from 'ngx-bootstrap/pagination';
+import { FullPostComponent } from './full-post/full-post.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     CreateBlogComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    FullPostComponent
   ],
   imports: [
     BrowserModule,

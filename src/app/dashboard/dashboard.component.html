@@ -23,9 +23,9 @@ totalItems: count}; let idx = index; "> -->
    <div class="card-body">
        <h5 class="card-title">{{blog.title}}</h5>
        <p class="card-text ">{{blog.content}}</p>
-       <button href="#" class="btn btn-primary mx-4" (click)="edit(blog.id)">Edit</button>  
-       <button class="btn btn-danger mx-4" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="setId(blog.id)">Delete</button>
-       
+       <button href="#" class="btn btn-primary mx-3" (click)="edit(blog.id)">Edit</button>  
+       <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="setId(blog.id)">Delete</button>
+       <button class="btn-group-sm btn btn-dark mx-3" (click)="fullBlog(blog.id)">>></button>
 <div class="modal" id="exampleModal"  aria-labelledby="exampleModalLabel" aria-hidden="true">
 <div class="modal-dialog  modal-dialog-centered">
 <div class="modal-content">

@@ -18,7 +18,9 @@ export class CreateBlogComponent {
     info:Blog={
       id: 0,
       title:'',
-      content:' '
+      imageUrl:'',
+      content:' ',
+     // description:''
     }
     postForm!:FormGroup;
 
@@ -28,7 +30,9 @@ export class CreateBlogComponent {
     this.postForm =this.fb.group({
       id:[''],
       title:['',Validators.required],
-      content:['',Validators.required ]
+      content:['',Validators.required ],
+      imageUrl:[''],
+    //  description:['']
     })
 
     this.route.params.subscribe(params =>{
@@ -43,7 +47,9 @@ export class CreateBlogComponent {
       this.postForm.patchValue({
         id: data.id,
         title: data.title,
-        content: data.content
+        content: data.content,
+        imageUrl: data.imageUrl,
+       // description: data.description
       })
       this.updateBtn=true
       this.submitBtn=false
@@ -55,6 +61,8 @@ export class CreateBlogComponent {
     this.info.id=Math.round( Math.random()*100)
     this.info.title = this.postForm.value.title
     this.info.content = this.postForm.value.content
+    this.info.imageUrl = this.postForm.value.imageUrl
+    
     console.log(this.info);
     this.api.postBlog(this.info).subscribe((res)=>{
       // alert("Blog added successfully!")

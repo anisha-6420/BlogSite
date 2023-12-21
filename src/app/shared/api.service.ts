@@ -2,12 +2,14 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { Blog } from '../blog';
+import { Observable } from 'rxjs';
 // import * as fs from 'fs';
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
 
+  apiUrl ='https://picsum.photos';
   constructor(private http : HttpClient) {}
 
   getBlogById(index:number){
@@ -50,5 +52,10 @@ export class ApiService {
     .pipe(map((res:any)=>{
       return res;
     }))
+  }
+
+  getRandomImage(width: number, height: number):Observable<Blob>{
+    const url = `${this.apiUrl}/${width}/${height}`;
+    return this.http.get(url,{responseType:'blob'})
   }
 }

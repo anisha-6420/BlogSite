@@ -1,0 +1,11 @@
+<nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+<button class="btn" routerLink="/">
+<img src="/assets/icon.png" class="mx-4 rounded " style="width: 60px; height: 45px;" >
+</button>
+</nav>
+<div class="container border bg-light text-center" style=" padding: 30px 30px; margin: 30px 100px;" >
+    <h2>{{blogPost.title}}</h2>
+    <img [src]="blogPost.imageUrl" alt="">
+    <P>{{blogPost.content}}</P>
+    <p></p>
+</div>
