@@ -9,8 +9,8 @@
 <button type="button" class="d-flex btn btn-light mx-5"  routerLink="/create-blog">+ Create Blog</button>
 </nav>
 
-<div class="container mt-5">
-<div class="row ">
+<div class="container mt-5 ">
+<div class="row mx-5">
 <div  style="color:darkred; font-size: larger; font-weight: bold;" *ngIf="blogPost.length === 0">There are no blogs!</div>
 
 <!-- <div class="col-auto mx-4 mb-5" *ngFor="let blog of filteredBlog | paginate:{ itemsPerPage:blogSize,
@@ -18,14 +18,18 @@ currentPage: page,
 totalItems: count}; let idx = index; "> -->
 <div class="col-auto mx-4 mb-5" *ngFor="let blog of pagedBlog; let idx= index">
 <div class="card-deck">
-<div class="card" style="width: 18rem; height: auto; border: 1px solid darkslategray;">
+<div class="card" style="width: 20rem;  border: 1px solid darkslategray;">
    <!-- <img class="card-img-top" src="" alt="Card image cap"> -->
-   <div class="card-body">
-       <h5 class="card-title">{{blog.title}}</h5>
-       <p class="card-text ">{{blog.content}}</p>
-       <button href="#" class="btn btn-primary mx-3" (click)="edit(blog.id)">Edit</button>  
+   <div class="card-body" style="height: 200px;">
+       <h5 class="card-title text-center">{{blog.title}}</h5>
+       <br>
+       <p class="card-text ">{{blog.content}}<span class="ellipsis" (click)="fullBlog(blog.id)">...more</span> </p>
+      </div>
+       <div class="card-footer">
+       <button href="#" class="btn btn-primary mx-4" (click)="edit(blog.id)">Edit</button>  
        <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="setId(blog.id)">Delete</button>
-       <button class="btn-group-sm btn btn-dark mx-3" (click)="fullBlog(blog.id)">>></button>
+       <button class="btn-group-sm btn btn-dark mx-4" (click)="fullBlog(blog.id)">>></button>
+      </div>
 <div class="modal" id="exampleModal"  aria-labelledby="exampleModalLabel" aria-hidden="true">
 <div class="modal-dialog  modal-dialog-centered">
 <div class="modal-content">
@@ -39,7 +43,7 @@ totalItems: count}; let idx = index; "> -->
 </div>
 </div>
 </div>
-   </div>
+   
 </div>
 </div>
 </div>

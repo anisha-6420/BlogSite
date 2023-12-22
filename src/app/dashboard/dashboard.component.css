@@ -1,7 +1,8 @@
 .card-deck {
     display: flex;
     flex-wrap: wrap;
-    align-items: stretch;
+    align-items: stretch; 
+    
   }
   .card {
     flex: 1 0 auto;
@@ -11,4 +12,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .ellipsis{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    max-width:min-content; /* Adjust max-width as needed */ 
+    color: blue;
   }
