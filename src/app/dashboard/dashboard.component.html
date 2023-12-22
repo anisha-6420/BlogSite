@@ -1,4 +1,4 @@
-<nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+<nav class="navbar bg-dark border-bottom border-body"  data-bs-theme="dark">
 <button class="btn" routerLink="/">
 <img src="/assets/icon.png" class="mx-4 rounded " style="width: 60px; height: 45px;"  >
 </button>
@@ -18,12 +18,13 @@ currentPage: page,
 totalItems: count}; let idx = index; "> -->
 <div class="col-auto mx-4 mb-5" *ngFor="let blog of pagedBlog; let idx= index">
 <div class="card-deck">
-<div class="card" style="width: 20rem;  border: 1px solid darkslategray;">
+<div class="card" style=" width: 20rem;  border: 1px solid darkslategray;">
    <!-- <img class="card-img-top" src="" alt="Card image cap"> -->
    <div class="card-body" style="height: 200px;">
        <h5 class="card-title text-center">{{blog.title}}</h5>
        <br>
-       <p class="card-text ">{{blog.content}}<span class="ellipsis" (click)="fullBlog(blog.id)">...more</span> </p>
+       
+       <p> <span class="card-text clamp-lines">{{blog.content}}</span><span class="ellipsis" (click)="fullBlog(blog.id)">...more</span></p>
       </div>
        <div class="card-footer">
        <button href="#" class="btn btn-primary mx-4" (click)="edit(blog.id)">Edit</button>  

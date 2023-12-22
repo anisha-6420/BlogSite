@@ -13,11 +13,17 @@
     justify-content: center;
     align-items: center;
   }
+  .card-text{
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      -webkit-line-clamp: 2;
+      text-overflow: ellipsis ;
+    
+  }
   .ellipsis{
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
     cursor: pointer;
-    max-width:min-content; /* Adjust max-width as needed */ 
     color: blue;
   }
+ 
